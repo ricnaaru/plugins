@@ -37,6 +37,8 @@ CMMotionManager* _motionManager;
 void _initMotionManager() {
   if (!_motionManager) {
     _motionManager = [[CMMotionManager alloc] init];
+    [_motionManager setDeviceMotionUpdateInterval:(.01)];
+    [_motionManager setGyroUpdateInterval:(.01)];
   }
 }
 
